@@ -1,0 +1,23 @@
+snippet fun
+	${1:public} function ${2:FunctionName}(${3:Type} $${4:var} = ${5:null})
+	{
+	    ${6:# code}
+	}
+
+snippet kd
+	error_reporting(E_ALL & ~E_WARNING);
+	\d( ${1:{VISUAL}} );
+
+snippet kdd
+	error_reporting(E_ALL & ~E_WARNING);
+	\d( ${1:{VISUAL}} );
+	die();
+
+snippet vd
+	error_reporting(E_ALL & ~E_WARNING);
+	\var_dump( ${1:{VISUAL}} );
+
+snippet vdd
+	error_reporting(E_ALL & ~E_WARNING);
+	\var_dump( ${1:{VISUAL}} );
+	die();
