@@ -9,14 +9,16 @@ endif
 " install plugins {{{
 call plug#begin('~/.vim/bundle')
 
+Plug 'dense-analysis/ale'
+Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
-Plug 'junegunn/fzf'
+Plug 'jpalardy/vim-slime'
 if has('macunix')
     Plug '/usr/local/opt/fzf'
 else
-    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf'
 endif
-Plug 'jpalardy/vim-slime'
+Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
@@ -26,7 +28,6 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
-Plug 'dense-analysis/ale'
 
 call plug#end()
 " }}}
@@ -41,6 +42,9 @@ colorscheme gruvbox
 
 " background
 set background=dark
+
+" highlight
+hi CursorLine term=bold cterm=bold
 " }}}
 
 " misc {{{
@@ -115,9 +119,6 @@ set lazyredraw
 " show tabs and space as chars
 set list
 set listchars=tab:→\ ,space:·
-
-" highlight
-hi CursorLine term=bold cterm=bold
 
 " scrolling
 set mouse=a
@@ -277,4 +278,4 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 " }}}
 
 set modelines=1
-" vim:foldmethod=marker:foldlevel=0
+" vim:foldmethod=marker:foldlevel=0:nolist
