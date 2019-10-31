@@ -11,7 +11,11 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+if has('macunix')
+    Plug '/usr/local/opt/fzf'
+else
+    Plug 'junegunn/fzf.vim'
+endif
 Plug 'jpalardy/vim-slime'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
