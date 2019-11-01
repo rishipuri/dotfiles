@@ -45,6 +45,9 @@ set background=dark
 
 " highlight
 hi CursorLine term=bold cterm=bold
+
+" for some reason SpecialKey colors are same as normal text in WSL
+hi SpecialKey term=bold ctermfg=237 gui=bold guifg=#424242
 " }}}
 
 " misc {{{
@@ -180,15 +183,19 @@ nnoremap <Leader><Right> :bnext<CR>
 inoremap jk <Esc>
 " }}}
 
-" copy {{{
+" wsl related settings {{{
 if system('uname -r') =~ "Microsoft"
-    let s:clip = $MNT.'/c/Windows/System32/clip.exe'
+    " copy yanked text to clipboard
+    let s:clip = 'clip.exe'
     if executable(s:clip)
         augroup WSLYank
             autocmd!
             autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
         augroup END
     end
+
+    " open links under cursor 
+    let g:netrw_browsex_viewer="cmd.exe /C start"
 end
 " }}}
 
