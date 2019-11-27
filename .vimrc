@@ -69,6 +69,7 @@ set smartcase
 
 " omni complete
 set omnifunc=syntaxcomplete#Complete
+set completeopt=menu
 
 " encoding
 set encoding=utf-8
