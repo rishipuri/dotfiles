@@ -22,11 +22,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'sirver/ultisnips'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-vdebug/vdebug'
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
@@ -60,6 +62,15 @@ set secure
 
 " set modeline
 set modeline
+
+" set hidden
+set hidden
+
+" set updatetime
+set updatetime=300
+
+" set cmdheight
+set cmdheight=2
 
 " search
 set hlsearch
@@ -283,6 +294,13 @@ nnoremap <Leader>sd :SignifyDiff<CR>
 " slime settings {{{
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
+" }}}
+
+" coc settings {{{
+let g:coc_global_extensions = [
+    \ 'coc-html', 'coc-css', 'coc-json', 'coc-tag', 'coc-phpls',
+    \ 'coc-dictionary'
+    \ ]
 " }}}
 
 set modelines=1
