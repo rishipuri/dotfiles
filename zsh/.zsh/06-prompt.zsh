@@ -22,7 +22,7 @@ function vcs_prompt_info {
     VCS_PROMPT_PREFIX="%{$fg_bold[blue]%}$VCS:(%{$fg[red]%}"
     VCS_PROMPT_SUFFIX="%{$fg[blue]%})%{$reset_color%}"
 
-    echo "$VCS_PROMPT_PREFIX$VCS_INFO$VCS_PROMPT_SUFFIX"
+    if [[ -n $VCS ]] && echo "$VCS_PROMPT_PREFIX$VCS_INFO$VCS_PROMPT_SUFFIX"
 }
 
 PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} '
