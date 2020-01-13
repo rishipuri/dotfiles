@@ -44,12 +44,6 @@ colorscheme gruvbox
 
 " background
 set background=dark
-
-" highlight
-hi CursorLine term=bold cterm=bold
-
-" for some reason SpecialKey colors are same as normal text in WSL
-hi SpecialKey term=bold ctermfg=237 gui=bold guifg=#424242
 " }}}
 
 " misc {{{
