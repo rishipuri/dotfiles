@@ -235,7 +235,11 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 
 " php
-let g:ale_linters = {'php': ['phpcs', 'phpmd'], 'javascript': ['eslint']}
+let g:ale_linters = {
+    \ 'php': ['phpcs', 'phpmd'],
+    \ 'javascript': ['eslint'],
+    \ 'javascriptreact': ['eslint']
+    \ }
 
 " mappings
 nnoremap <Leader>at :ALEToggle<CR>
