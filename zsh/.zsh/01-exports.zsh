@@ -5,5 +5,6 @@ export LC_CTYPE=en_US.UTF-8
 
 export VISUAL="vim"
 export EDITOR="vim"
+export TERMINAL="alacritty"
 
 export CLICOLOR=1
