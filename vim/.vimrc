@@ -189,22 +189,6 @@ nnoremap <Leader><Right> :bnext<CR>
 inoremap jk <Esc>
 " }}}
 
-" wsl related settings {{{
-if system('uname -r') =~ "Microsoft"
-    " copy yanked text to clipboard
-    let s:clip = 'clip.exe'
-    if executable(s:clip)
-        augroup WSLYank
-            autocmd!
-            autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
-        augroup END
-    end
-
-    " open links under cursor 
-    let g:netrw_browsex_viewer="cmd.exe /C start"
-end
-" }}}
-
 " ultisnips settings {{{
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/snippets'
@@ -299,6 +283,10 @@ let g:coc_global_extensions = [
     \ 'coc-html', 'coc-css', 'coc-json', 'coc-tag', 'coc-phpls',
     \ 'coc-dictionary'
     \ ]
+
+" mappings
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
 " }}}
 
 set modelines=1
