@@ -19,12 +19,12 @@ else
     Plug 'junegunn/fzf'
 endif
 Plug 'junegunn/fzf.vim'
-Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'sirver/ultisnips'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -176,7 +176,7 @@ inoremap <Leader>ymdhis <C-R>=strftime('%Y%m%d%H%M%S')<CR>
 nnoremap <Leader>\ :noh<CR>
 
 " copy current-file:line-number to clipboard
-nnoremap <Leader>yfl :let @*=join([expand('%'), line('.')], ':')<CR>
+nnoremap <Leader>yfl :let @+=join([expand('%'), line('.')], ':')<CR>
 
 " buffer navigation
 nnoremap <Leader>h :bprevious<CR>
@@ -212,13 +212,16 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Show buffer number
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Enable powerline fonts
+let g:airline_powerline_fonts = 1
 " }}}
 
 " ale settings {{{
 " fixers
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 
-" php
+" linters
 let g:ale_linters = {
     \ 'php': ['phpcs', 'phpmd'],
     \ 'javascript': ['eslint'],
@@ -227,6 +230,8 @@ let g:ale_linters = {
 
 " mappings
 nnoremap <Leader>at :ALEToggle<CR>
+nnoremap <Leader>an :ALENext<CR>
+nnoremap <Leader>ap :ALEPrevious<CR>
 " }}}
 
 " vimwiki settings {{{
@@ -253,7 +258,7 @@ command! -bang -nargs=* Rg
     \   <bang>0)
 
 command! -bang HFiles
-    \ call fzf#run({'source': 'hg manifest', 'sink': 'e'}) 
+    \ call fzf#run({'source': 'hg manifest', 'sink': 'e'})
 " }}}
 
 " tagbar settings {{{
