@@ -1,7 +1,7 @@
 set $mod Mod1
 set $super Mod4
 
-font pango:monospace 8
+font pango:UbuntuMono Nerd Font 9
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -17,6 +17,12 @@ exec --no-startup-id "dunst -conf ~/.config/dunst/config"
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# compositor
+exec --no-startup-id picom
+
+# xbindkeys
+exec --no-startup-id xbindkeys
+
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
@@ -28,6 +34,16 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Screenshots with maim
+bindsym Print exec --no-startup-id maim ~/Pictures/$(date +%s).png
+bindsym Shift+Print exec --no-startup-id maim -s ~/Pictures/$(date +%s).png
+bindsym $super+Print exec --no-startup-id maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png
+
+# Clipboard Screenshots with maim
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+bindsym Ctrl+$super+Print exec --no-startup-id maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
