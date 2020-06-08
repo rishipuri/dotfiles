@@ -1,3 +1,5 @@
 {
-
+    "coc.source.around.priority": 100,
+    "coc.source.buffer.priority": 100,
+    "coc.source.dictionary.priority": 99
 }
