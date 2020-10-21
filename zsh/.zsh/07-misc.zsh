@@ -6,6 +6,13 @@ setopt MULTIOS
 setopt INTERACTIVECOMMENTS
 setopt GLOBDOTS
 
+sourceif () {
+    [ -f $1 ] && source $1
+}
+
 # source plugins
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+sourceif /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+sourceif /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# source nvm
+sourceif /usr/share/nvm/init-nvm.sh
