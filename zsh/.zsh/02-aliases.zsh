@@ -6,6 +6,7 @@ alias srczshrc='source ~/.zshrc'
 alias bashrc='vi ~/.bashrc'
 alias srcbashrc='source ~/.bashrc'
 
+alias ls='ls --color=auto'
 alias lsa='ls -lah'
 alias l='ls -lah'
 alias ll='ls -lh'
