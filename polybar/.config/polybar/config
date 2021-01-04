@@ -15,13 +15,13 @@ height = 20
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = UbuntuMono Nerd Font:size=10;1
-font-1 = UbuntuMono Nerd Font:size=10;1
-font-2 = UbuntuMono Nerd Font:size=10;1
+font-0 = UbuntuMono:size=10;1
+font-1 = UbuntuMono:size=10;1
+font-2 = UbuntuMono:size=10;1
 
 modules-left = i3
 modules-center = 
-modules-right = eth ip filesystem memory cpu pulseaudio date powermenu
+modules-right = eth ip filesystem memory cpu pulseaudio date
 
 tray-position = right
 tray-padding = 6
@@ -133,39 +133,6 @@ time-alt = %H:%M:%S
 
 label = %date% %time%
 label-padding = 1
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = "⏻"
-label-open-padding = 1
-
-label-close = 
-label-close-padding = 1
-
-label-separator = "|"
-
-label-open-background = #900000
-label-close-background = #900000
-
-menu-0-0 = REBOOT
-menu-0-0-exec = menu-open-1
-menu-0-1 = SHUTDOWN |
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = CANCEL
-menu-1-0-exec = menu-open-0
-menu-1-1 = REBOOT
-menu-1-1-exec = sudo systemctl reboot
-
-menu-2-0 = CANCEL
-menu-2-0-exec = menu-open-0
-menu-2-1 = SHUTDOWN 
-menu-2-1-exec = sudo systemctl poweroff
 
 [settings]
 screenchange-reload = true
