@@ -112,13 +112,13 @@ format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-padding-right = 1
 
-label-muted = 婢 muted
+label-muted = VOL: muted
 label-muted-foreground = #666
 label-muted-padding = 1
 
-ramp-volume-0 = 奄
-ramp-volume-1 = 奔
-ramp-volume-2 = 墳
+ramp-volume-0 = VOL:
+ramp-volume-1 = VOL:
+ramp-volume-2 = VOL:
 ramp-volume-padding-left = 1
 
 [module/date]
