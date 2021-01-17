@@ -35,7 +35,6 @@ dhclient
 dhcpcd
 dialog
 diff-so-fancy
-diffutils
 dmenu
 dmraid
 dnsmasq
@@ -59,13 +58,14 @@ gcc
 gimp
 git
 gnu-netcat
-gpm
 gptfdisk
 grml-zsh-config
+groff
 grub
 gvim
 haveged
 hdparm
+hwinfo
 i3-gaps
 i3blocks
 i3blocks-contrib
@@ -87,6 +87,7 @@ libplist
 libreoffice-still
 libtool
 libusbmuxd
+linux
 linux-atm
 linux-firmware
 linux-headers
@@ -113,7 +114,6 @@ nautilus
 nbd
 ndisc6
 neofetch
-nerd-fonts-complete
 netctl
 network-manager-applet
 networkmanager
@@ -121,7 +121,10 @@ nfs-utils
 nilfs-utils
 nm-connection-editor
 nmap
+noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
 ntfs-3g
 ntp
 nvm
@@ -145,6 +148,7 @@ polybar
 ppp
 pptpclient
 pulseaudio
+pyenv
 python-pip
 ranger
 refind
@@ -169,10 +173,15 @@ syslinux
 tcpdump
 teams
 testdisk
+texinfo
 thunderbird
 tmux
 tree
+ttf-fira-code
+ttf-fira-mono
+ttf-fira-sans
 ttf-font-awesome
+ttf-hack
 ttf-iosevka
 ttf-iosevka-term
 ttf-mac-fonts
@@ -183,13 +192,14 @@ usbmuxd
 usbutils
 vi
 virtualbox
+virtualbox-guest-utils
 virtualbox-host-modules-arch
 vpnc
 wget
+which
 wireless-regdb
 wireless_tools
 words
-wpa_supplicant
 wvdial
 xautomation
 xbindkeys
@@ -215,7 +225,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -246,6 +255,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
