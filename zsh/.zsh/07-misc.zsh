@@ -16,3 +16,11 @@ sourceif /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 
 # source nvm
 sourceif /usr/share/nvm/init-nvm.sh
+
+# source pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
