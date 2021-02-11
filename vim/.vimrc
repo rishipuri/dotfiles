@@ -100,6 +100,9 @@ set expandtab
 set autoindent
 set breakindent
 set showbreak=>>
+
+" make mouse work beyond 223 column
+set ttymouse=sgr
 " }}}
 
 " visual stuff {{{
