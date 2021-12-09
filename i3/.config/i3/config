@@ -151,6 +151,14 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # move current workspace to the next output
 bindsym $mod+m move workspace to output right
 
+# scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# notes scratchpad
+bindsym $mod+n [class="Alacritty"] scratchpad show
+bindsym $mod+b [class="Spotify"] scratchpad show
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
