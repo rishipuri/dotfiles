@@ -27,6 +27,7 @@ Plug 'sirver/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
+Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-vdebug/vdebug'
 Plug 'vimwiki/vimwiki'
@@ -222,7 +223,10 @@ let g:airline_powerline_fonts = 1
 
 " ale settings {{{
 " fixers
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers = {
+    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \ 'javascript': ['eslint']
+    \ }
 
 " linters
 let g:ale_linters = {
@@ -304,6 +308,13 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+" }}}
+
+" open-browser settings {{{
+let g:netrw_nogx = 1
+
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 " }}}
 
 set modelines=1
