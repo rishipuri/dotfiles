@@ -12,6 +12,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'dense-analysis/ale'
 Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
+Plug 'jiangmiao/auto-pairs'
 Plug 'jpalardy/vim-slime'
 if has('macunix')
     Plug '/usr/local/opt/fzf'
