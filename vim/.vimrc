@@ -1,24 +1,20 @@
 " install vim plug {{{
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob($HOME . '/.vim/autoload/plug.vim'))
+    silent !curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " }}}
 
 " install plugins {{{
-call plug#begin('~/.vim/bundle')
+call plug#begin($HOME . '/.vim/bundle')
 
 Plug 'dense-analysis/ale'
 Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jpalardy/vim-slime'
-if has('macunix')
-    Plug '/usr/local/opt/fzf'
-else
-    Plug 'junegunn/fzf'
-endif
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
@@ -85,14 +81,18 @@ set encoding=utf-8
 set backspace=2
 
 " change grep prg
-set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+endif
 
 " split location
 set splitright
 set splitbelow
 
 " set dict
-set dictionary=/usr/share/dict/words
+if !empty(glob('/usr/share/dict/words'))
+    set dictionary=/usr/share/dict/words
+endif
 
 " indent
 set tabstop=4
@@ -148,24 +148,18 @@ set redrawtime=10000
 " filetype {{{
 filetype plugin on
 filetype indent on
-
-" open new split with hgcommit filetype containing diff of commit files
-augroup HgCommitDiff
-  autocmd!
-  autocmd BufReadPost * if &ft ==# 'hgcommit' | :new | execute 'r!hg diff $(cat $(hg root)/.hg/current-commit-files.txt)' | set filetype=diff | :0 | :resize 44 | endif
-augroup END
 " }}}
 
 " swap/backup/undo {{{
 " swap
-set directory=~/.vim/swapdir//
+set directory=$HOME/.vim/swapdir//
 
 " undo
 set undofile
-set undodir=~/.vim/undodir
+set undodir=$HOME/.vim/undodir
 
 " backup
-set backupdir=~/.vim/backupdir//
+set backupdir=$HOME/.vim/backupdir//
 " }}}
 
 " mappings {{{
@@ -196,8 +190,8 @@ inoremap jk <Esc>
 
 " ultisnips settings {{{
 let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsSnippetsDir='~/.vim/snippets'
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/snippets/UltiSnips']
+let g:UltiSnipsSnippetsDir=$HOME . '/.vim/snippets'
+let g:UltiSnipsSnippetDirectories=[$HOME . '/.vim/snippets/UltiSnips']
 " }}}
 
 " nerdtree settings {{{
@@ -247,7 +241,7 @@ nnoremap <Leader>ap :ALEPrevious<CR>
 let g:vimwiki_table_mappings = 0
 
 let g:vimwiki_list= [{
-    \ 'path': $HOME.'/Notes/',
+    \ 'path': $HOME . '/Notes/',
     \ 'auto_tags': 1,
     \ 'ext': '.md',
     \ 'syntax': 'markdown'
@@ -264,9 +258,6 @@ command! -bang -nargs=* Rg
     \   <bang>0 ? fzf#vim#with_preview('up:60%')
     \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?'),
     \   <bang>0)
-
-command! -bang HFiles
-    \ call fzf#run({'source': 'hg manifest', 'sink': 'e'})
 " }}}
 
 " tagbar settings {{{
