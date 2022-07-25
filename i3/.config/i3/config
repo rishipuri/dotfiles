@@ -188,6 +188,12 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+mode "passthrough" {
+    bindsym $mod+Alt_R mode "default"
+}
+
+bindsym $mod+Alt_R mode "passthrough"
+
 bindsym $mod+r mode "resize"
 
 focus_follows_mouse no
