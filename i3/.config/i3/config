@@ -1,7 +1,7 @@
 set $mod Mod1
 set $super Mod4
 
-font pango:UbuntuMono 9
+font pango:NotoSansMono 9
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

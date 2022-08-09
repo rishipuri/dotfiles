@@ -15,9 +15,9 @@ height = 20
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = UbuntuMono:size=10;1
-font-1 = UbuntuMono:size=10;1
-font-2 = UbuntuMono:size=10;1
+font-0 = NotoSansMono:size=10;1
+font-1 = NotoSansMono:size=10;1
+font-2 = NotoSansMono:size=10;1
 
 modules-left = i3
 modules-center = 
