@@ -19,6 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sirver/ultisnips'
 Plug 'tpope/vim-fugitive'
@@ -285,7 +286,7 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 " coc settings {{{
 let g:coc_global_extensions = [
     \ 'coc-html', 'coc-css', 'coc-json', 'coc-tag', 'coc-phpls',
-    \ 'coc-dictionary'
+    \ 'coc-dictionary', 'coc-rust-analyzer'
     \ ]
 
 " mappings
@@ -300,6 +301,9 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" fix coc completion menu colors
+hi CocMenuSel ctermbg=237 guibg=#3c3836
 " }}}
 
 " open-browser settings {{{
