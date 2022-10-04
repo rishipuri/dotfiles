@@ -1,5 +1,6 @@
 {
     "coc.source.around.priority": 100,
     "coc.source.buffer.priority": 100,
-    "coc.source.dictionary.priority": 99
+    "coc.source.dictionary.priority": 99,
+    "clangd.path": "~/Dev/dotfiles/alacritty/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
 }
