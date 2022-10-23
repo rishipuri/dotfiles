@@ -30,3 +30,5 @@ sourceif "$HOME/.cargo/env"
 # fzf
 sourceif /usr/share/fzf/key-bindings.zsh
 sourceif /usr/share/fzf/completion.zsh
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
