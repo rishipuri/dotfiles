@@ -24,3 +24,6 @@ map('i', 'jk', '<Esc>')
 -- NvimTree
 map('n', '<Leader>b', ':NvimTreeToggle<CR>')
 map('n', '<Leader>f', ':NvimTreeFindFile<CR>')
+
+-- vim-signify
+map('n', '<Leader>st', ':SignifyToggle<CR>')

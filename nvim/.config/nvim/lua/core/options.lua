@@ -3,6 +3,7 @@ local opt = vim.opt
 opt.mouse = 'a'
 opt.clipboard = 'unnamedplus'
 opt.modeline = true
+opt.undofile = true
 
 opt.number = true
 opt.relativenumber = true
