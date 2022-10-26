@@ -11,8 +11,11 @@ require('nvim-tree').setup {
                 folder = {
                     arrow_closed = '>',
                     arrow_open = 'v',
-                }
-            }
-        }
-    }
+                },
+            },
+        },
+    },
+    git = {
+        enable = false,
+    },
 }
