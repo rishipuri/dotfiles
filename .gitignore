@@ -1,1 +1,5 @@
+# exclude alacritty local config overrides
+alacritty.local.yml
+
+# exclude nvim packer_compiled
 nvim/.config/nvim/plugin/packer_compiled.lua
