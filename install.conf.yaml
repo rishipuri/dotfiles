@@ -1,0 +1,30 @@
+- link:
+    ~/.config/alacritty:
+      path: alacritty
+    ~/.config/conky:
+      path: conky
+    ~/.config/dunst:
+      path: dunst
+    ~/.config/i3:
+      path: i3
+    ~/.config/nvim:
+      path: nvim
+    ~/.config/picom:
+      path: picom
+    ~/.config/polybar:
+      path: polybar
+    ~/.vimrc:
+      path: vim/.vimrc
+    ~/.vim:
+      path: vim/.vim
+    ~/.tmux.conf:
+      path: tmux/.tmux.conf
+    ~/.zprofile:
+      path: zsh/.zprofile
+    ~/.zshrc:
+      path: zsh/.zshrc
+    ~/.zsh:
+      path: zsh/.zsh
+    ~/:
+      glob: true
+      path: X/.*
