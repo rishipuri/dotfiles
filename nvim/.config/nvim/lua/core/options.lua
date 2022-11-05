@@ -4,6 +4,7 @@ opt.mouse = 'a'
 opt.clipboard = 'unnamedplus'
 opt.modeline = true
 opt.undofile = true
+opt.completeopt = 'menu,preview,noselect,noinsert'
 
 opt.number = true
 opt.relativenumber = true
