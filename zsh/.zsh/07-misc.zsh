@@ -11,8 +11,8 @@ sourceif () {
 }
 
 # source plugins
-sourceif /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-sourceif /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+sourceif ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+sourceif ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # source nvm
 sourceif /usr/share/nvm/init-nvm.sh
