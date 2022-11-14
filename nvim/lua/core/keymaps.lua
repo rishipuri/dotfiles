@@ -26,6 +26,12 @@ map('n', '<C-u>', '<C-u>zz')
 map('n', '<C-d>', '<C-d>zz')
 map('n', 'n', 'nzz')
 
+-- quickfix/location list navigation
+map('n', '[c', ':cprev<CR>')
+map('n', ']c', ':cnext<CR>')
+map('n', '[l', ':lprev<CR>')
+map('n', ']l', ':lnext<CR>')
+
 -- NvimTree
 map('n', '<Leader>b', ':NvimTreeToggle<CR>')
 map('n', '<Leader>f', ':NvimTreeFindFile<CR>')
