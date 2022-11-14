@@ -21,6 +21,11 @@ map('n', '\\', ':noh<CR>')
 -- remap esc
 map('i', 'jk', '<Esc>')
 
+-- center window after some movements
+map('n', '<C-u>', '<C-u>zz')
+map('n', '<C-d>', '<C-d>zz')
+map('n', 'n', 'nzz')
+
 -- NvimTree
 map('n', '<Leader>b', ':NvimTreeToggle<CR>')
 map('n', '<Leader>f', ':NvimTreeFindFile<CR>')
