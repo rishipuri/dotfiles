@@ -50,7 +50,7 @@ return packer.startup(function(use)
     use('tpope/vim-surround')
     use('tpope/vim-obsession')
 
-    use('mhinz/vim-signify')
+    use('lewis6991/gitsigns.nvim')
 
     use('jiangmiao/auto-pairs')
 

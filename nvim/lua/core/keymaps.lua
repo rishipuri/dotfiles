@@ -27,8 +27,8 @@ map('n', '<C-d>', '<C-d>zz')
 map('n', 'n', 'nzz')
 
 -- quickfix/location list navigation
-map('n', '[c', ':cprev<CR>')
-map('n', ']c', ':cnext<CR>')
+map('n', '[q', ':cprev<CR>')
+map('n', ']q', ':cnext<CR>')
 map('n', '[l', ':lprev<CR>')
 map('n', ']l', ':lnext<CR>')
 
@@ -36,5 +36,10 @@ map('n', ']l', ':lnext<CR>')
 map('n', '<Leader>b', ':NvimTreeToggle<CR>')
 map('n', '<Leader>f', ':NvimTreeFindFile<CR>')
 
--- vim-signify
-map('n', '<Leader>st', ':SignifyToggle<CR>')
+-- gitsigns
+map('n', '<Leader>gs', ':Gitsigns toggle_signs<CR>')
+map('n', '<Leader>gn', ':Gitsigns toggle_numhl<CR>')
+map('n', '<Leader>gl', ':Gitsigns toggle_linehl<CR>')
+map('n', '<Leader>gb', ':Gitsigns toggle_current_line_blame<CR>')
+map('n', '[c', ':Gitsigns prev_hunk<CR>')
+map('n', ']c', ':Gitsigns next_hunk<CR>')
