@@ -23,7 +23,7 @@ return packer.startup(function(use)
     use('wbthomason/packer.nvim')
 
     -- status line
-    use('vim-airline/vim-airline')
+    use('nvim-lualine/lualine.nvim')
 
     -- search
     use('junegunn/fzf')
