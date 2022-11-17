@@ -43,3 +43,9 @@ map('n', '<Leader>gl', ':Gitsigns toggle_linehl<CR>')
 map('n', '<Leader>gb', ':Gitsigns toggle_current_line_blame<CR>')
 map('n', '[c', ':Gitsigns prev_hunk<CR>')
 map('n', ']c', ':Gitsigns next_hunk<CR>')
+
+-- telescope
+map('n', '<Leader>tf', ':Telescope find_files<CR>')
+map('n', '<Leader>tg', ':Telescope live_grep<CR>')
+map('n', '<Leader>tb', ':Telescope buffers<CR>')
+map('n', '<Leader>th', ':Telescope help_tags<CR>')
