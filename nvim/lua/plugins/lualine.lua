@@ -1,10 +1,9 @@
 require('lualine').setup {
     options = {
-        component_separators = { left = '|', right = '|' },
         disabled_filetypes = {
             statusline = { 'NvimTree' }
         },
-        theme = 'gruvbox',
+        theme = 'gruvbox-material',
     },
     sections = {
         lualine_b = {
@@ -51,6 +50,7 @@ require('lualine').setup {
             {
                 'buffers',
                 show_modified_status = false,
+                mode = 4,
                 max_length = vim.o.columns,
                 filetype_names = {
                     NvimTree = 'File Explorer',
