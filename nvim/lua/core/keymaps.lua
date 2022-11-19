@@ -46,6 +46,7 @@ map('n', ']c', ':Gitsigns next_hunk<CR>')
 
 -- telescope
 map('n', '<Leader>tf', ':Telescope find_files<CR>')
-map('n', '<Leader>tg', ':Telescope live_grep<CR>')
+map('n', '<Leader>tr', ':Telescope live_grep<CR>')
 map('n', '<Leader>tb', ':Telescope buffers<CR>')
 map('n', '<Leader>th', ':Telescope help_tags<CR>')
+map('n', '<Leader>tg', ':Telescope git_files<CR>')
