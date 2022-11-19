@@ -49,7 +49,6 @@ require('lualine').setup {
         lualine_a = {
             {
                 'buffers',
-                show_modified_status = false,
                 mode = 4,
                 max_length = vim.o.columns,
                 filetype_names = {
