@@ -6,7 +6,10 @@ bindkey "^[[1~" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^[[4~" end-of-line
 
+bindkey "^F" forward-word
 bindkey "^[[1;5C" forward-word
+
+bindkey "^B" backward-word
 bindkey "^[[1;5D" backward-word
 
 # search history on Up/Down keys
