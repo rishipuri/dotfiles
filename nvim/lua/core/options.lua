@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 opt.mouse = 'a'
+opt.termguicolors = true
 opt.clipboard = 'unnamedplus'
 opt.modeline = true
 opt.undofile = true
