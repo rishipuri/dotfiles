@@ -1,52 +1,50 @@
-local function map(mode, lhs, rhs, opts)
-    local options = { noremap = true, silent = true }
-    if opts then
-        options = vim.tbl_extend('force', options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
+-- map leader key
 vim.g.mapleader = ' '
 
 -- buffer navigation
-map('n', '<Leader>h', ':bprevious<CR>')
-map('n', '<Leader>l', ':bnext<CR>')
-map('n', '<Leader>q', ':bdelete<CR>')
-map('n', '<Leader><Left>', ':bprevious<CR>')
-map('n', '<Leader><Right>', ':bnext<CR>')
+vim.keymap.set('n', '<Leader>h', ':bprevious<CR>')
+vim.keymap.set('n', '<Leader>l', ':bnext<CR>')
+vim.keymap.set('n', '<Leader>q', ':bdelete<CR>')
+vim.keymap.set('n', '<Leader><Left>', ':bprevious<CR>')
+vim.keymap.set('n', '<Leader><Right>', ':bnext<CR>')
 
 -- clear highlighting
-map('n', '\\', ':noh<CR>')
+vim.keymap.set('n', '\\', ':noh<CR>')
 
 -- remap esc
-map('i', 'jk', '<Esc>')
+vim.keymap.set('i', 'jk', '<Esc>')
 
--- center window after some movements
-map('n', '<C-u>', '<C-u>zz')
-map('n', '<C-d>', '<C-d>zz')
-map('n', 'n', 'nzz')
+-- better navigation in file
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- quickfix/location list navigation
-map('n', '[q', ':cprev<CR>')
-map('n', ']q', ':cnext<CR>')
-map('n', '[l', ':lprev<CR>')
-map('n', ']l', ':lnext<CR>')
+vim.keymap.set('n', '[q', ':cprev<CR>')
+vim.keymap.set('n', ']q', ':cnext<CR>')
+vim.keymap.set('n', '[l', ':lprev<CR>')
+vim.keymap.set('n', ']l', ':lnext<CR>')
 
 -- NvimTree
-map('n', '<Leader>b', ':NvimTreeToggle<CR>')
-map('n', '<Leader>f', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<Leader>b', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<Leader>f', ':NvimTreeFindFile<CR>')
 
 -- gitsigns
-map('n', '<Leader>gs', ':Gitsigns toggle_signs<CR>')
-map('n', '<Leader>gn', ':Gitsigns toggle_numhl<CR>')
-map('n', '<Leader>gl', ':Gitsigns toggle_linehl<CR>')
-map('n', '<Leader>gb', ':Gitsigns toggle_current_line_blame<CR>')
-map('n', '[c', ':Gitsigns prev_hunk<CR>')
-map('n', ']c', ':Gitsigns next_hunk<CR>')
+vim.keymap.set('n', '<Leader>gs', ':Gitsigns toggle_signs<CR>')
+vim.keymap.set('n', '<Leader>gn', ':Gitsigns toggle_numhl<CR>')
+vim.keymap.set('n', '<Leader>gl', ':Gitsigns toggle_linehl<CR>')
+vim.keymap.set('n', '<Leader>gb', ':Gitsigns toggle_current_line_blame<CR>')
+vim.keymap.set('n', '[c', ':Gitsigns prev_hunk<CR>')
+vim.keymap.set('n', ']c', ':Gitsigns next_hunk<CR>')
 
 -- telescope
-map('n', '<Leader>tf', ':Telescope find_files<CR>')
-map('n', '<Leader>tr', ':Telescope live_grep<CR>')
-map('n', '<Leader>tb', ':Telescope buffers<CR>')
-map('n', '<Leader>th', ':Telescope help_tags<CR>')
-map('n', '<Leader>tg', ':Telescope git_files<CR>')
+vim.keymap.set('n', '<Leader>tf', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<Leader>tr', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<Leader>tb', ':Telescope buffers<CR>')
+vim.keymap.set('n', '<Leader>th', ':Telescope help_tags<CR>')
+vim.keymap.set('n', '<Leader>tg', ':Telescope git_files<CR>')

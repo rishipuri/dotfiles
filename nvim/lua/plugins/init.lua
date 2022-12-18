@@ -47,6 +47,7 @@ return packer.startup(function(use)
 
     -- colorscheme
     use('gruvbox-community/gruvbox')
+    use('rebelot/kanagawa.nvim')
 
     -- lsp
     use('neovim/nvim-lspconfig')
@@ -67,9 +68,11 @@ return packer.startup(function(use)
     use('tpope/vim-surround')
     use('tpope/vim-obsession')
 
+    -- git
     use('lewis6991/gitsigns.nvim')
 
     use('jiangmiao/auto-pairs')
+    use('ojroques/vim-oscyank')
 
     if packer_bootstrap then
         packer.sync()
