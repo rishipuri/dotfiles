@@ -1,4 +1,5 @@
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 xrandr --dpi 144
 xwallpaper --zoom ~/Pictures/wallpaper.png
