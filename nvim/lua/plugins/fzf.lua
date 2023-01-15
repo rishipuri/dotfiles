@@ -4,13 +4,13 @@ vim.cmd [[
 
     command! -bang -nargs=* Rg
         \ call fzf#vim#grep(
-        \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+        \   'rg --hidden --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
         \   <bang>0 ? fzf#vim#with_preview('up:60%')
         \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?'),
         \   <bang>0)
 
     function! RgFzf(query, fullscreen)
-        let cmd = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+        let cmd = 'rg --hidden --column --line-number --no-heading --color=always --smart-case -- %s || true'
         let initial_cmd = printf(cmd, shellescape(a:query))
         let reload_cmd = printf(cmd, '{q}')
         let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_cmd]}
