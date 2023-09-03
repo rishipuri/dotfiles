@@ -48,3 +48,10 @@ vim.keymap.set('n', '<Leader>tr', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<Leader>tb', ':Telescope buffers<CR>')
 vim.keymap.set('n', '<Leader>th', ':Telescope help_tags<CR>')
 vim.keymap.set('n', '<Leader>tg', ':Telescope git_files<CR>')
+
+-- fzf
+vim.keymap.set('n', '<Leader>sf', ':FZF<CR>')
+vim.keymap.set('n', '<Leader>sr', ':Rg<CR>')
+vim.keymap.set('n', '<Leader>sR', ':RG<CR>')
+vim.keymap.set('n', '<Leader>sb', ':Buf<CR>')
+vim.keymap.set('n', '<Leader>sg', ':GFiles<CR>')

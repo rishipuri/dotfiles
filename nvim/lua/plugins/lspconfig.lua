@@ -50,6 +50,7 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 local servers = {
+    'clangd',
     'flow',
     'pyright',
     'rust_analyzer',
