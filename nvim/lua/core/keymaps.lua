@@ -42,15 +42,8 @@ vim.keymap.set('n', '<Leader>gb', ':Gitsigns toggle_current_line_blame<CR>')
 vim.keymap.set('n', '[c', ':Gitsigns prev_hunk<CR>')
 vim.keymap.set('n', ']c', ':Gitsigns next_hunk<CR>')
 
--- telescope
-vim.keymap.set('n', '<Leader>tf', ':Telescope find_files<CR>')
-vim.keymap.set('n', '<Leader>tr', ':Telescope live_grep<CR>')
-vim.keymap.set('n', '<Leader>tb', ':Telescope buffers<CR>')
-vim.keymap.set('n', '<Leader>th', ':Telescope help_tags<CR>')
-vim.keymap.set('n', '<Leader>tg', ':Telescope git_files<CR>')
-
 -- fzf
-vim.keymap.set('n', '<Leader>sf', ':FZF<CR>')
+vim.keymap.set('n', '<Leader>sf', ':Files<CR>')
 vim.keymap.set('n', '<Leader>sr', ':Rg<CR>')
 vim.keymap.set('n', '<Leader>sR', ':RG<CR>')
 vim.keymap.set('n', '<Leader>sb', ':Buf<CR>')
